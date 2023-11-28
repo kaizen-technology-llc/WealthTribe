@@ -481,3 +481,8 @@ $RECYCLE.BIN/
 
 # Rider
 .idea
+
+#Sqllite
+src/Web/app.db
+src/Web/app.db-wal
+src/Web/app.db-shm
