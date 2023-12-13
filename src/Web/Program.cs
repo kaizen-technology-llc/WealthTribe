@@ -6,9 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddKeyVaultIfConfigured(builder.Configuration);
 
 builder.Services.AddApplicationServices();
-builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddInfrastructureServices(builder.Configuration, builder.Environment);
 builder.Services.AddWebServices();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
