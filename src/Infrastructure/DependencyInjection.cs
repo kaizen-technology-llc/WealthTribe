@@ -25,13 +25,17 @@ public static class DependencyInjection
         services.AddDbContext<ApplicationDbContext>((sp, options) =>
         {
             options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
-            if (hostEnvironment.IsDevelopment())
-            {
-                options.UseSqlite(connectionString);
+            
+            if(hostEnvironment.IsDevelopment()){
+                    options.UseSqlite(
+                        connectionString,
+                        x => x.MigrationsAssembly("Infrastructure.Data.Migrations.Sqlite"));
             }
             else
             {
-                options.UseSqlServer(connectionString);
+                options.UseSqlServer(
+                    connectionString,
+                    x => x.MigrationsAssembly("Infrastructure.Data.Migrations.SqlServer"));
             }
         });
 

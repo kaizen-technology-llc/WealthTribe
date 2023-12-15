@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Infrastructure.Data.Migrations.Sqlite\Infrastructure.Data.Migrations.Sqlite.csproj" />
+    <ProjectReference Include="..\Infrastructure.Data.Migrations.SqlServer\Infrastructure.Data.Migrations.SqlServer.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
