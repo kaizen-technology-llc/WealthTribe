@@ -8,7 +8,7 @@ import {
   NavbarBrand,
   NavbarToggler,
   NavItem,
-  NavLink
+  NavLink, NavbarText
 } from 'reactstrap';
 import Gravatar from 'react-gravatar';
 import { Link } from 'react-router-dom';
@@ -66,7 +66,9 @@ export const NavMenu = () => {
               <AuthenticatedTemplate>
                 <UncontrolledDropdown nav inNavbar isOpen={dropdownOpen} toggle={toggleDropDown}>
                   <DropdownToggle nav><Gravatar className="rounded-circle" size="25" email={activeAccount && activeAccount.username ? activeAccount.username : 'Unknown'} /></DropdownToggle>
-                  <DropdownMenu right>
+                  <DropdownMenu end>
+                    <DropdownItem text><NavbarText>{activeAccount && activeAccount.username ? activeAccount.username : 'Unknown'}</NavbarText></DropdownItem>
+                    <DropdownItem divider />
                     <DropdownItem onClick={handleLogoutRedirect}>Sign Out</DropdownItem>
                     <DropdownItem onClick={handleProfileEdit}>Edit Profile</DropdownItem>
                   </DropdownMenu>
