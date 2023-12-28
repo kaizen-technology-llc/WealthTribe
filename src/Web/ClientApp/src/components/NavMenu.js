@@ -8,7 +8,7 @@ import {
   NavbarBrand,
   NavbarToggler,
   NavItem,
-  NavLink, NavbarText
+  NavLink, NavbarText, Nav
 } from 'reactstrap';
 import Gravatar from 'react-gravatar';
 import { Link } from 'react-router-dom';
@@ -53,7 +53,7 @@ export const NavMenu = () => {
           <NavbarBrand tag={Link} to="/"><img src="img/logo.png" alt="WealthTribe.AI"/></NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} className="mr-2"/>
           <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={isOpen} navbar>
-            <ul className="navbar-nav flex-grow">
+            <Nav className="flex-grow">
               <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
               </NavItem>
@@ -79,7 +79,7 @@ export const NavMenu = () => {
                   <NavLink tag={Link} className="text-dark" onClick={handleLoginRedirect}>Sign In</NavLink>
                 </NavItem>
               </UnauthenticatedTemplate>
-            </ul>
+            </Nav>
           </Collapse>
         </Navbar>
       </header>
