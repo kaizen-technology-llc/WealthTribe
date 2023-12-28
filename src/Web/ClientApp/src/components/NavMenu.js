@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {
   Collapse,
-  Dropdown,
+  UncontrolledDropdown,
   DropdownItem, DropdownMenu,
   DropdownToggle,
   Navbar,
@@ -10,6 +10,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+import Gravatar from 'react-gravatar';
 import { Link } from 'react-router-dom';
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
 import { InteractionStatus } from "@azure/msal-browser";
@@ -63,15 +64,13 @@ export const NavMenu = () => {
                 <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch&nbsp;data</NavLink>
               </NavItem>
               <AuthenticatedTemplate>
-                <NavItem>
-                  <Dropdown isOpen={dropdownOpen} toggle={toggleDropDown}>
-                    <DropdownToggle caret>{activeAccount && activeAccount.displayName ? activeAccount.displayName : 'Unknown'}</DropdownToggle>
-                    <DropdownMenu>
-                      <DropdownItem onClick={handleLogoutRedirect}>Sign Out</DropdownItem>
-                      <DropdownItem onClick={handleProfileEdit}>Edit Profile</DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
-                </NavItem>
+                <UncontrolledDropdown nav inNavbar isOpen={dropdownOpen} toggle={toggleDropDown}>
+                  <DropdownToggle nav><Gravatar className="rounded-circle" size="25" email={activeAccount && activeAccount.username ? activeAccount.username : 'Unknown'} /></DropdownToggle>
+                  <DropdownMenu right>
+                    <DropdownItem onClick={handleLogoutRedirect}>Sign Out</DropdownItem>
+                    <DropdownItem onClick={handleProfileEdit}>Edit Profile</DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
               </AuthenticatedTemplate>
               <UnauthenticatedTemplate>
                 <NavItem>
