@@ -53,7 +53,7 @@ export const NavMenu = () => {
           <NavbarBrand tag={Link} to="/"><img src="img/logo.png" alt="WealthTribe.AI"/></NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} className="mr-2"/>
           <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={isOpen} navbar>
-            <Nav className="flex-grow">
+            <Nav className="flex-grow" navbar>
               <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
               </NavItem>
@@ -66,7 +66,7 @@ export const NavMenu = () => {
               <AuthenticatedTemplate>
                 <UncontrolledDropdown nav inNavbar isOpen={dropdownOpen} toggle={toggleDropDown}>
                   <DropdownToggle nav><Gravatar className="rounded-circle" size="25" email={activeAccount && activeAccount.username ? activeAccount.username : 'Unknown'} /></DropdownToggle>
-                  <DropdownMenu end>
+                  <DropdownMenu className="navbar-dropdown-end" end>
                     <DropdownItem text><NavbarText>{activeAccount && activeAccount.username ? activeAccount.username : 'Unknown'}</NavbarText></DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem onClick={handleLogoutRedirect}>Sign Out</DropdownItem>
