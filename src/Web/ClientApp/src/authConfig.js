@@ -8,7 +8,7 @@ import { LogLevel } from "@azure/msal-browser";
 export const b2cPolicies = {
     names: {
         signUpSignIn: 'B2C_1_susi',
-        forgotPassword: 'B2C_1_forgot_password',
+        forgotPassword: 'B2C_1_reset_password',
         editProfile: 'B2C_1_edit_profile',
     },
     authorities: {
@@ -16,7 +16,7 @@ export const b2cPolicies = {
             authority: 'https://wealthtribestaging.b2clogin.com/wealthtribestaging.onmicrosoft.com/B2C_1_susi',
         },
         forgotPassword: {
-            authority: 'https://wealthtribestaging.b2clogin.com/wealthtribestaging.onmicrosoft.com/B2C_1_forgot_password',
+            authority: 'https://wealthtribestaging.b2clogin.com/wealthtribestaging.onmicrosoft.com/B2C_1_reset_password',
         },
         editProfile: {
             authority: 'https://wealthtribestaging.b2clogin.com/wealthtribestaging.onmicrosoft.com/B2C_1_edit_profile',
@@ -33,7 +33,7 @@ export const b2cPolicies = {
  */
 export const msalConfig = {
     auth: {
-        clientId: '620e02b9-f8c1-42b7-a5b0-9248ca10fb9d', // This is the ONLY mandatory field that you need to supply.
+        clientId: 'e704d6a7-8c43-4ee8-ab78-05992e6f391d', // This is the ONLY mandatory field that you need to supply.
         authority: b2cPolicies.authorities.signUpSignIn.authority, // Choose SUSI as your default authority.
         knownAuthorities: [b2cPolicies.authorityDomain], // Mark your B2C tenant's domain as trusted.
         redirectUri: '/', // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
