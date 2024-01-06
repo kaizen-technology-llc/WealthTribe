@@ -65,7 +65,7 @@ export const NavMenu = () => {
               </NavItem>
               <AuthenticatedTemplate>
                 <UncontrolledDropdown nav inNavbar isOpen={dropdownOpen} toggle={toggleDropDown}>
-                  <DropdownToggle nav><Gravatar className="rounded-circle" size="25" email={activeAccount && activeAccount.username ? activeAccount.username : 'Unknown'} /></DropdownToggle>
+                  <DropdownToggle nav><Gravatar className="rounded-circle" size="25" default="monsterid" email={activeAccount && activeAccount.username ? activeAccount.username : 'Unknown'} /></DropdownToggle>
                   <DropdownMenu className="navbar-dropdown-end" end>
                     <DropdownItem text><NavbarText>{activeAccount && activeAccount.username ? activeAccount.username : 'Unknown'}</NavbarText></DropdownItem>
                     <DropdownItem divider />
