@@ -1,7 +1,7 @@
 import React from 'react';
 import { AuthenticatedTemplate } from '@azure/msal-react';
 import { useMsal } from '@azure/msal-react';
-import { IdTokenDisplay } from './IdTokenDisplay';
+import { IdTokenDisplay } from '../components/IdTokenDisplay';
 
 export const Home = () => {
     const { instance } = useMsal();

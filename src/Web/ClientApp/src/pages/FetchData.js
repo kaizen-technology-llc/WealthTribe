@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import followIfLoginRedirect from './api-authorization/followIfLoginRedirect';
+import followIfLoginRedirect from '../components/api-authorization/followIfLoginRedirect';
 import { WeatherForecastsClient } from '../web-api-client.ts';
 
 export class FetchData extends Component {
