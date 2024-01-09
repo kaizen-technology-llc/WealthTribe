@@ -9,6 +9,7 @@ export const Home = () => {
     return (
       <div>
         <h1>Hello, world!</h1>
+          <p>Welcome to WealthTribe AI, your gateway to a revolutionary approach to portfolio sharing and investment collaboration. Our platform empowers investors to connect, learn, and grow together.</p>
         <p>Welcome to your new single-page application, built with:</p>
         <ul>
           <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
@@ -24,9 +25,7 @@ export const Home = () => {
         <p>The <code>ClientApp</code> subdirectory is a standard React application based on the <code>create-react-app</code> template. If you open a command prompt in that directory, you can run <code>npm</code> commands such as <code>npm test</code> or <code>npm install</code>.</p>
           <AuthenticatedTemplate>
               {activeAccount ? (
-                  <p>
-                      <IdTokenDisplay idTokenClaims={activeAccount.idTokenClaims} />
-                  </p>
+                  <IdTokenDisplay idTokenClaims={activeAccount.idTokenClaims} />
               ) : null}
           </AuthenticatedTemplate>
       </div>

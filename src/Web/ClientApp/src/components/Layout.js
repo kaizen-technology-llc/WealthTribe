@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'reactstrap';
+import { MDBContainer } from 'mdb-react-ui-kit';
 import { NavMenu } from './NavMenu';
 
 export class Layout extends Component {
@@ -9,9 +9,9 @@ export class Layout extends Component {
     return (
       <div>
         <NavMenu />
-        <Container tag="main">
+        <MDBContainer tag="main">
           {this.props.children}
-        </Container>
+        </MDBContainer>
       </div>
     );
   }

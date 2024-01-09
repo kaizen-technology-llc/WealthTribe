@@ -1,4 +1,4 @@
-import { Table } from 'reactstrap';
+import { MDBTable } from 'mdb-react-ui-kit';
 import { createClaimsTable } from '../utils/claimUtils';
 
 export const IdTokenDisplay = (props) => {
@@ -15,17 +15,17 @@ export const IdTokenDisplay = (props) => {
     });
     return (
         <>
-            <div className="data-area-div">
-                <p>
-                    See below the claims in your <strong> ID token </strong>. For more information, visit:{' '}
-                    <span>
+            <p>
+                See below the claims in your <strong> ID token </strong>. For more information, visit:{' '}
+                <span>
                         <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/id-tokens#claims-in-an-id-token">
                             docs.microsoft.com
                         </a>
                     </span>
-                </p>
+            </p>
+            <div className="data-area-div">
                 <div className="data-area-div">
-                    <Table responsive striped bordered hover>
+                    <MDBTable responsive striped bordered hover>
                         <thead>
                         <tr>
                             <th>Claim</th>
@@ -34,7 +34,7 @@ export const IdTokenDisplay = (props) => {
                         </tr>
                         </thead>
                         <tbody>{tableRow}</tbody>
-                    </Table>
+                    </MDBTable>
                 </div>
             </div>
         </>
