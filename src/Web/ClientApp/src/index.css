@@ -4,6 +4,6 @@ body {
 
 .background-people {
   background-image: url('../public/img/background-people.jpeg');
-  background-attachment: fixed;
-  background-size: cover;
+  overflow: auto;
+  height: 100vh;
 }
