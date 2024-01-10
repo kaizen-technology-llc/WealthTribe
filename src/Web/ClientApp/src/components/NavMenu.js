@@ -58,6 +58,9 @@ export const NavMenu = () => {
                 <MDBNavbarLink tag={Link} className="text-dark" to="/counter">Counter</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
+                <MDBNavbarLink tag={Link} className="text-dark" to="/diagnostics">Diagnostics</MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
                 <MDBNavbarLink tag={Link} className="text-dark" to="/fetch-data">Fetch&nbsp;data</MDBNavbarLink>
               </MDBNavbarItem>
               <AuthenticatedTemplate>

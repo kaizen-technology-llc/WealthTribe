@@ -7,12 +7,14 @@ export class Layout extends Component {
 
   render() {
     return (
-      <div>
-        <NavMenu />
-        <MDBContainer tag="main">
-          {this.props.children}
-        </MDBContainer>
-      </div>
+        <div className="bg-image background-people">
+            <div className='mask' style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
+                <NavMenu />
+                <MDBContainer tag="main">
+                  {this.props.children}
+                </MDBContainer>
+            </div>
+        </div>
     );
   }
 }

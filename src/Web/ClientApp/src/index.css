@@ -1,3 +1,9 @@
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
+
+.background-people {
+  background-image: url('../public/img/background-people.jpeg');
+  background-attachment: fixed;
+  height: 100vh;
+}

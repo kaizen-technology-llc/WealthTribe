@@ -1,33 +1,21 @@
-import React from 'react';
-import { AuthenticatedTemplate } from '@azure/msal-react';
-import { useMsal } from '@azure/msal-react';
-import { IdTokenDisplay } from '../components/IdTokenDisplay';
-
 export const Home = () => {
-    const { instance } = useMsal();
-    const activeAccount = instance.getActiveAccount();
     return (
       <div>
-        <h1>Hello, world!</h1>
-          <p>Welcome to WealthTribe AI, your gateway to a revolutionary approach to portfolio sharing and investment collaboration. Our platform empowers investors to connect, learn, and grow together.</p>
-        <p>Welcome to your new single-page application, built with:</p>
-        <ul>
-          <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-          <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
-          <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-        </ul>
-        <p>To help you get started, we have also set up:</p>
-        <ul>
-          <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-          <li><strong>Development server integration</strong>. In development mode, the development server from <code>create-react-app</code> runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-          <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration produces minified, efficiently bundled JavaScript files.</li>
-        </ul>
-        <p>The <code>ClientApp</code> subdirectory is a standard React application based on the <code>create-react-app</code> template. If you open a command prompt in that directory, you can run <code>npm</code> commands such as <code>npm test</code> or <code>npm install</code>.</p>
-          <AuthenticatedTemplate>
-              {activeAccount ? (
-                  <IdTokenDisplay idTokenClaims={activeAccount.idTokenClaims} />
-              ) : null}
-          </AuthenticatedTemplate>
+        <h1>Welcome!</h1>
+          <p>Welcome to <strong>Wealth Tribe AI</strong>, your gateway to a revolutionary approach to portfolio sharing and investment collaboration. Our platform empowers investors to connect, learn, and grow together.</p>
+          
+          <p>At <strong>Wealth Tribe AI</strong>, we believe in the power of shared knowledge and collective wisdom. Our platform allows users to showcase their investment strategies and successes by publicly sharing the percentage gains or losses of their portfolios. This transparency encourages an environment of learning and collaboration among a community of passionate investors.</p>
+
+          <p>However, we prioritize the confidentiality of your financial information. While the percentage gains or losses of your portfolio will be visible to the community, the actual investment values remain private. Your personal financial details are securely protected, ensuring your sensitive information stays confidential.</p>
+
+          <p>Join <strong>Wealth Tribe AI</strong> to:</p>
+          <ul>
+              <li><strong>Share Insights, Safeguard Privacy:</strong> Showcase your investment expertise by sharing percentage returns without revealing specific investment amounts.</li>
+              <li><strong>Learn and Collaborate:</strong> Engage with a community of like-minded investors, learn from their strategies, and collaborate to optimize investment approaches.</li>
+              <li><strong>Empower Decision-Making:</strong> Gain valuable insights into successful investment strategies while maintaining the privacy of your individual financial information.</li>
+          </ul>
+
+          <p>Our platform fosters an environment of transparency, collaboration, and learning without compromising the confidentiality of your personal investment details. Join <strong>Wealth Tribe AI</strong> today and become a part of a vibrant community where knowledge-sharing leads to collective success.</p>
       </div>
     );
 }
