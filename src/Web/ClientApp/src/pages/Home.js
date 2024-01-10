@@ -4,7 +4,7 @@ export const Home = () => {
         <h1>Welcome!</h1>
           <p>Welcome to <strong>Wealth Tribe AI</strong>, your gateway to a revolutionary approach to portfolio sharing and investment collaboration. Our platform empowers investors to connect, learn, and grow together.</p>
           
-          <p>At <strong>Wealth Tribe AI</strong>, we believe in the power of shared knowledge and collective wisdom. Our platform allows users to showcase their investment strategies and successes by publicly sharing the percentage gains or losses of their portfolios. This transparency encourages an environment of learning and collaboration among a community of passionate investors.</p>
+          <p>At <strong>Wealth Tribe AI</strong>, we believe in the power of shared knowledge and collective wisdom. Our platform allows users to showcase their investment strategies and successes by publicly sharing the percentage gains or losses of their portfolios and investments. This transparency encourages an environment of learning and collaboration among a community of passionate investors.</p>
 
           <p>However, we prioritize the confidentiality of your financial information. While the percentage gains or losses of your portfolio will be visible to the community, the actual investment values remain private. Your personal financial details are securely protected, ensuring your sensitive information stays confidential.</p>
 
