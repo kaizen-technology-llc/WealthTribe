@@ -13,13 +13,13 @@ export const b2cPolicies = {
     },
     authorities: {
         signUpSignIn: {
-            authority: 'https://wealthtribestaging.b2clogin.com/wealthtribestaging.onmicrosoft.com/B2C_1_susi',
+            authority: 'https://wealthtribestaging.b2clogin.com/wealthtribestaging.onmicrosoft.com/B2C_1A_signup_signin',
         },
         forgotPassword: {
-            authority: 'https://wealthtribestaging.b2clogin.com/wealthtribestaging.onmicrosoft.com/B2C_1_reset_password',
+            authority: 'https://wealthtribestaging.b2clogin.com/wealthtribestaging.onmicrosoft.com/B2C_1A_PasswordReset',
         },
         editProfile: {
-            authority: 'https://wealthtribestaging.b2clogin.com/wealthtribestaging.onmicrosoft.com/B2C_1_edit_profile',
+            authority: 'https://wealthtribestaging.b2clogin.com/wealthtribestaging.onmicrosoft.com/B2C_1A_ProfileEdit',
         },
     },
     authorityDomain: 'wealthtribestaging.b2clogin.com',
