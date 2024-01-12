@@ -1,0 +1,30 @@
+name: Deploy Policies
+on:
+  workflow_call:
+    inputs:
+      environmentName:
+        required: true
+        type: string
+      ieftoolConfig:
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environmentName }}
+    name: Deploy Trust Framework
+    steps:
+      - uses: actions/checkout@v3
+      - uses: judedaryl/ieftool-action/setup@v1
+      - uses: judedaryl/ieftool-action/build@v1
+        with:
+          source: ./.azure/TrustFramework
+          output: trust-framework-build
+          config: ./.azure/TrustFramework/${{ inputs.ieftoolConfig }}
+      - uses: judedaryl/ieftool-action/deploy@v1
+        with:
+          folder: trust-framework-build
+          client-id: ${{ vars.B2C_CLIENT_ID }}
+          client-secret: ${{ secrets.B2C_CLIENT_SECRET }}
+          tenant-id: ${{ vars.B2C_TENANT_ID }}

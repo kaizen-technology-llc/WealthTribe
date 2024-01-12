@@ -1,0 +1,22 @@
+name: Deploy Azure B2C Policies
+
+on: 
+  push:
+    branches: [ azure-trust-framework-deploy ]
+    paths-ignore:
+      - .gitignore
+      - CODE_OF_CONDUCT.md
+      - LICENSE
+      - README.md
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy-trust-framework-staging:
+    uses: ./.github/workflows/trust-framework-deploy.yml
+    secrets: inherit
+    with:
+      environmentName: Staging
+      ieftoolConfig: ieftool-stg.config
