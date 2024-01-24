@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {
+  MDBBtn,
   MDBCollapse,
   MDBDropdown,
   MDBDropdownItem, MDBDropdownMenu,
@@ -76,7 +77,7 @@ export const NavMenu = () => {
               </AuthenticatedTemplate>
               <UnauthenticatedTemplate>
                 <MDBNavbarItem>
-                  <MDBNavbarLink tag={Link} className="text-dark" onClick={handleLoginRedirect}>Sign In</MDBNavbarLink>
+                  <MDBBtn color="primary" onClick={handleLoginRedirect}>Sign In</MDBBtn>
                 </MDBNavbarItem>
               </UnauthenticatedTemplate>
             </MDBNavbarNav>
