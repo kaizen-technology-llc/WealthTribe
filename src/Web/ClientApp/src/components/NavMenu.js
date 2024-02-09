@@ -46,7 +46,7 @@ export const NavMenu = () => {
       <header>
         <MDBNavbar className="navbar-expand-md navbar-toggleable-md ng-white border-bottom mb-3" light>
           <MDBContainer>
-          <MDBNavbarBrand tag={Link} to="/"><img src="img/logo.png" alt="WealthTribe.AI"/></MDBNavbarBrand>
+          <MDBNavbarBrand tag={Link} to="/"><img src="img/logo.png" alt="WealthTribe.AI" height="70"/></MDBNavbarBrand>
           <MDBNavbarToggler aria-expanded='false' aria-label='Toggle navigation' onClick={toggleNavbar} >
             <MDBIcon icon='bars' fas />
           </MDBNavbarToggler>
@@ -77,7 +77,7 @@ export const NavMenu = () => {
               </AuthenticatedTemplate>
               <UnauthenticatedTemplate>
                 <MDBNavbarItem>
-                  <MDBBtn color="primary" onClick={handleLoginRedirect}>Sign In</MDBBtn>
+                  <MDBBtn color="secondary" onClick={handleLoginRedirect}>Sign In</MDBBtn>
                 </MDBNavbarItem>
               </UnauthenticatedTemplate>
             </MDBNavbarNav>
